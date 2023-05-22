@@ -1,0 +1,53 @@
+themetaxabarplot <- theme_bw() + 
+  theme(strip.background=element_blank(), 
+        strip.text.x=element_text(face = "bold.italic", size = 8), 
+        strip.text.y=element_text(face = "bold.italic", size = 8), 
+        panel.spacing = unit(2, "lines"),
+        axis.title.x=element_blank(), 
+        axis.title.y=element_text(size = 8, face ="italic", vjust = 4), 
+        axis.text.y=element_text(size = 7, face ="bold"), 
+        axis.text.x=element_blank(),
+        axis.ticks.x = element_blank(),
+        legend.text=element_text(size = 8), 
+        legend.background=element_blank(),
+        legend.title=element_text(face="bold", size=6, angle=90, vjust = 6, 
+                                  hjust = 0.2),
+        legend.position = "bottom",
+        legend.key.size = unit(0.2, 'cm'),
+        panel.border=element_rect(colour="grey", linewidth = 0), 
+        panel.background=element_blank(), 
+        plot.background=element_blank(), 
+        plot.margin=unit(c(1,1,1,1), "cm"),
+        panel.grid=element_blank(), 
+        panel.spacing.y = unit(0.10, "lines"), 
+        panel.spacing.x = unit(0.05, "lines"))
+
+themeworldmap <-
+  theme(panel.background = element_rect(fill="grey99"),
+        panel.border = element_rect(color="black", fill=NA, linewidth=1.2,
+                                    linetype = "solid"),
+        axis.title = element_text(face="italic"),
+        axis.text = element_text(face="italic"),
+        legend.title=element_text(face="bold", size=8, angle=0),
+        legend.position = "right",
+        legend.key.size = unit(0.4, 'cm'),
+        legend.direction="horizontal",
+        legend.background = element_blank())
+
+
+themerarplot <- theme_bw() + 
+  theme(strip.background=element_rect(fill="grey95", color="white"), 
+        strip.text=element_text(face = "bold.italic", size = 12), 
+        axis.title.x=element_text(face="bold", size=11, vjust=-3), 
+        axis.title.y=element_text(face="bold", size=11, vjust=4), 
+        axis.text=element_text(size = 9, face ="bold"), 
+        legend.text=element_text(size = 6, face="bold"), 
+        legend.background=element_blank(),
+        legend.title=element_text(size=6, face="bold"),
+        legend.position="none",
+        panel.border=element_rect(colour="black", size = 1), 
+        panel.background=element_blank(), 
+        plot.background=element_blank(), 
+        plot.margin=unit(c(0.5,1,1,1), "cm"),
+        panel.grid=element_line(color="grey95"), 
+        panel.grid.minor=element_line(color="grey95")) 
