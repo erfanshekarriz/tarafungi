@@ -33,3 +33,21 @@ themeworldmap <-
         legend.key.size = unit(0.4, 'cm'),
         legend.direction="horizontal",
         legend.background = element_blank())
+
+
+themerarplot <- theme_bw() + 
+  theme(strip.background=element_rect(fill="grey95", color="white"), 
+        strip.text=element_text(face = "bold.italic", size = 12), 
+        axis.title.x=element_text(face="bold", size=11, vjust=-3), 
+        axis.title.y=element_text(face="bold", size=11, vjust=4), 
+        axis.text=element_text(size = 9, face ="bold"), 
+        legend.text=element_text(size = 6, face="bold"), 
+        legend.background=element_blank(),
+        legend.title=element_text(size=6, face="bold"),
+        legend.position="none",
+        panel.border=element_rect(colour="black", size = 1), 
+        panel.background=element_blank(), 
+        plot.background=element_blank(), 
+        plot.margin=unit(c(0.5,1,1,1), "cm"),
+        panel.grid=element_line(color="grey95"), 
+        panel.grid.minor=element_line(color="grey95")) 
