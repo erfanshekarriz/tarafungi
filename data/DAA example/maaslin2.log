@@ -1,0 +1,245 @@
+2023-05-28 09:49:47 INFO::Writing function arguments to log file
+2023-05-28 09:49:47 DEBUG::Function arguments
+2023-05-28 09:49:47 DEBUG::Output folder: ./data/DAA example
+2023-05-28 09:49:47 DEBUG::Min Abundance: 0.000000
+2023-05-28 09:49:47 DEBUG::Min Prevalence: 0.000000
+2023-05-28 09:49:47 DEBUG::Normalization: TSS
+2023-05-28 09:49:47 DEBUG::Transform: AST
+2023-05-28 09:49:47 DEBUG::Analysis method: LM
+2023-05-28 09:49:47 DEBUG::Max significance: 0.250000
+2023-05-28 09:49:47 DEBUG::Random effects:
+2023-05-28 09:49:47 DEBUG::Fixed effects: Env.feature..abbreviation.
+2023-05-28 09:49:47 DEBUG::Correction method: BH
+2023-05-28 09:49:47 DEBUG::Standardize: FALSE
+2023-05-28 09:49:47 DEBUG::Cores: 1
+2023-05-28 09:49:47 INFO::Verifying options selected are valid
+2023-05-28 09:49:47 INFO::Determining format of input files
+2023-05-28 09:49:47 INFO::Input format is data samples as columns and metadata samples as rows
+2023-05-28 09:49:47 DEBUG::Transformed data so samples are rows
+2023-05-28 09:49:47 DEBUG::A total of 321 samples were found in both the data and metadata
+2023-05-28 09:49:47 DEBUG::Reordering data/metadata to use same sample ordering
+2023-05-28 09:49:47 INFO::Formula for fixed effects: expr ~  Env.feature..abbreviation.
+2023-05-28 09:49:47 INFO::Filter data based on min abundance and min prevalence
+2023-05-28 09:49:47 INFO::Total samples in data: 321
+2023-05-28 09:49:47 INFO::Min samples required with min abundance for a feature not to be filtered: 0.000000
+2023-05-28 09:49:48 INFO::Total filtered features: 0
+2023-05-28 09:49:48 INFO::Filtered feature names from abundance and prevalence filtering:
+2023-05-28 09:49:48 INFO::Total filtered features with variance filtering: 0
+2023-05-28 09:49:48 INFO::Filtered feature names from variance filtering:
+2023-05-28 09:49:48 INFO::Running selected normalization method: TSS
+2023-05-28 09:49:48 INFO::Bypass z-score application to metadata
+2023-05-28 09:49:48 INFO::Running selected transform method: AST
+2023-05-28 09:49:48 INFO::Running selected analysis method: LM
+2023-05-28 09:49:48 INFO::Fitting model to feature number 1, X5bb1f8c90c2556e7d638a33006a7c717
+2023-05-28 09:49:48 INFO::Fitting model to feature number 2, X1967cb71e718c3a1a40322d82c55eaec
+2023-05-28 09:49:48 INFO::Fitting model to feature number 3, X95be89ad8768fb818d6ca91781e88270
+2023-05-28 09:49:48 INFO::Fitting model to feature number 4, X901f1c556706a660c4b37d1b5f11b265
+2023-05-28 09:49:48 INFO::Fitting model to feature number 5, X96a2bd7f8ed8a07838609e6da51dc319
+2023-05-28 09:49:48 INFO::Fitting model to feature number 6, e96c1b866887539f13cc94fa2d9f41e7
+2023-05-28 09:49:48 INFO::Fitting model to feature number 7, aef33796cd68d570e0fe5c9bdce5adf4
+2023-05-28 09:49:48 INFO::Fitting model to feature number 8, X08282972630627e934a91345ca83d411
+2023-05-28 09:49:48 INFO::Fitting model to feature number 9, d13e3ed8a4680082198d81067da50170
+2023-05-28 09:49:48 INFO::Fitting model to feature number 10, X16eafb715f45ca05aa06938ed7b498b5
+2023-05-28 09:49:48 INFO::Fitting model to feature number 11, X0bc0f191bc2dd86e43c5e3a54e48a61e
+2023-05-28 09:49:48 INFO::Fitting model to feature number 12, f214cd63f64bf7e2f0675272b5859eed
+2023-05-28 09:49:48 INFO::Fitting model to feature number 13, bdebf9f2f1b823d6f8b4f709241a412f
+2023-05-28 09:49:48 INFO::Fitting model to feature number 14, da1efefc038f96cbe4af2e885103020f
+2023-05-28 09:49:48 INFO::Fitting model to feature number 15, df3e8a8193100e8a275159e85bc2d5ea
+2023-05-28 09:49:48 INFO::Fitting model to feature number 16, X215186dc3de5509f59eb78463dd79783
+2023-05-28 09:49:48 INFO::Fitting model to feature number 17, fc5c45eb6bfe5e31b7cdfacfefe893b2
+2023-05-28 09:49:48 INFO::Fitting model to feature number 18, X195a1ae0e4c9a71dcdfd6ecdb4bf9026
+2023-05-28 09:49:48 INFO::Fitting model to feature number 19, X2e43584108e1d60a543c1c5347ed8d0c
+2023-05-28 09:49:48 INFO::Fitting model to feature number 20, X2a83d4e4b9e6ef3b4149227718730093
+2023-05-28 09:49:48 INFO::Fitting model to feature number 21, aef2ebc49dc032222c12882da98dc177
+2023-05-28 09:49:48 INFO::Fitting model to feature number 22, X5984078620bdbc4a9883465e292aac15
+2023-05-28 09:49:48 INFO::Fitting model to feature number 23, b659ab07521880ff21415cee8d765227
+2023-05-28 09:49:48 INFO::Fitting model to feature number 24, X18c22f445da1b09fee4963a5549ef0ee
+2023-05-28 09:49:48 INFO::Fitting model to feature number 25, c5bb70dfce1c23e80320a740c324e6b5
+2023-05-28 09:49:48 INFO::Fitting model to feature number 26, ff636004891933e3182e7544f54d3bc4
+2023-05-28 09:49:48 INFO::Fitting model to feature number 27, X3118d589f873f7d064e1a25fb89e4762
+2023-05-28 09:49:48 INFO::Fitting model to feature number 28, afaa3705b5a4d86604b2721e5856cbdc
+2023-05-28 09:49:48 INFO::Fitting model to feature number 29, X7749c90b1272b0ffc75d2f30290e423d
+2023-05-28 09:49:48 INFO::Fitting model to feature number 30, e75da0d4890fd35076c195ca15cc9b32
+2023-05-28 09:49:48 INFO::Fitting model to feature number 31, a746d101e707628e4867c322b65e3f96
+2023-05-28 09:49:48 INFO::Fitting model to feature number 32, X016f7d8361d13db20fdafb9c22b46c03
+2023-05-28 09:49:48 INFO::Fitting model to feature number 33, X3cdf89c5e7cc67cc69169e6e36e926ed
+2023-05-28 09:49:48 INFO::Fitting model to feature number 34, X9ead14e7abd32c2e56eda68266808e63
+2023-05-28 09:49:48 INFO::Fitting model to feature number 35, be09587b589eb9a1afb14db025fa15c7
+2023-05-28 09:49:48 INFO::Fitting model to feature number 36, X07ffed3268d19f99f07cd21efe98b3a3
+2023-05-28 09:49:48 INFO::Fitting model to feature number 37, X38a8f250140e57367b0473ea1268b6fa
+2023-05-28 09:49:48 INFO::Fitting model to feature number 38, b5bb3d33fe88e09c66728f4a2a52be15
+2023-05-28 09:49:48 INFO::Fitting model to feature number 39, X0c3726a0915757bd1807e5ec9c584d05
+2023-05-28 09:49:48 INFO::Fitting model to feature number 40, X884f74c2897f752d3ef15fc1fd279c6b
+2023-05-28 09:49:48 INFO::Fitting model to feature number 41, f7b547a6ca6b112bd42f51d78ebcba2e
+2023-05-28 09:49:48 INFO::Fitting model to feature number 42, X02b25cef81c35e97ab8a2ea07aa009f5
+2023-05-28 09:49:48 INFO::Fitting model to feature number 43, d11e6b0985fb6930a85ddc68409588d1
+2023-05-28 09:49:48 INFO::Fitting model to feature number 44, X94c5138a54d79f7a0ae39ee66f53ecb4
+2023-05-28 09:49:48 INFO::Fitting model to feature number 45, fd017f7edcd24bfe78be2bf9aa37a35c
+2023-05-28 09:49:48 INFO::Fitting model to feature number 46, c2a022302427800beab7e2050dc35311
+2023-05-28 09:49:48 INFO::Fitting model to feature number 47, X214b2a057e245bb1fa959013de86ec2c
+2023-05-28 09:49:48 INFO::Fitting model to feature number 48, X548550daa311cd42826afe363dc1b756
+2023-05-28 09:49:48 INFO::Fitting model to feature number 49, X0272d20d708a92b0577b96197e04f58f
+2023-05-28 09:49:48 INFO::Fitting model to feature number 50, e23c828e3d3d800733eab8653f7da053
+2023-05-28 09:49:48 INFO::Fitting model to feature number 51, X632f9366d1d697335aaf79e20e7a8292
+2023-05-28 09:49:48 INFO::Fitting model to feature number 52, X2193d19571159ae9f962f16b7e1bfbef
+2023-05-28 09:49:48 INFO::Fitting model to feature number 53, X769ab7d7ef77529507c37685ef3417c1
+2023-05-28 09:49:48 INFO::Fitting model to feature number 54, X6ffc41f59d945b26556648314286ff02
+2023-05-28 09:49:48 INFO::Fitting model to feature number 55, X4ec389a3e41486e7a2df714acf6d3a7c
+2023-05-28 09:49:48 INFO::Fitting model to feature number 56, be8be898a44a457fb813e2581ee96846
+2023-05-28 09:49:48 INFO::Fitting model to feature number 57, b8daf2356046515c41c02681d9f8d02c
+2023-05-28 09:49:48 INFO::Fitting model to feature number 58, bc652fd398a0438f04d0ec8709ea82b9
+2023-05-28 09:49:48 INFO::Fitting model to feature number 59, X841ac26abf068f836864f89f9fb130b3
+2023-05-28 09:49:48 INFO::Fitting model to feature number 60, X05580022c17ba821b4b6eeb210495442
+2023-05-28 09:49:48 INFO::Fitting model to feature number 61, bc077eeb8c69e25bbeeaa3986dd80306
+2023-05-28 09:49:48 INFO::Fitting model to feature number 62, X3ef2fd2dcdaca26a11f69fd095310382
+2023-05-28 09:49:48 INFO::Fitting model to feature number 63, a7f81116140378f5c9f91bdc03906a55
+2023-05-28 09:49:48 INFO::Fitting model to feature number 64, X5e91f622408daee7b48c93631158bd92
+2023-05-28 09:49:48 INFO::Fitting model to feature number 65, b9e157006c8b6294a559445f2a96b726
+2023-05-28 09:49:48 INFO::Fitting model to feature number 66, e6daa1442c9484d67bef5aa11f18569f
+2023-05-28 09:49:48 INFO::Fitting model to feature number 67, X775b2bffe4bd0793462881521754a24e
+2023-05-28 09:49:48 INFO::Fitting model to feature number 68, cecc33b499e40a59024c6b6bdc441448
+2023-05-28 09:49:48 INFO::Fitting model to feature number 69, fd5605b5a561f1f598b3db753d1a039d
+2023-05-28 09:49:48 INFO::Fitting model to feature number 70, X624819d4372ae0a7e1ce3f2dd3bce9b3
+2023-05-28 09:49:48 INFO::Fitting model to feature number 71, X3eb9abfaea8b4582a3cc79ddead459c4
+2023-05-28 09:49:48 INFO::Fitting model to feature number 72, X5991db3216664051e7eb171c0b579259
+2023-05-28 09:49:48 INFO::Fitting model to feature number 73, d958b9dbf64915aa698f14105d44b13d
+2023-05-28 09:49:48 INFO::Fitting model to feature number 74, X6e2fec47a465ab230e8a4325465a034e
+2023-05-28 09:49:48 INFO::Fitting model to feature number 75, X28ca65acfa86365ffbee6f2fa6af5198
+2023-05-28 09:49:48 INFO::Fitting model to feature number 76, X481075c3491f433e46c7c1f125746035
+2023-05-28 09:49:48 INFO::Fitting model to feature number 77, X7679d1bf1d2e5bb7e3fc7393d6498cfa
+2023-05-28 09:49:48 INFO::Fitting model to feature number 78, c9a5c4738f4b24e121925b941150b11a
+2023-05-28 09:49:48 INFO::Fitting model to feature number 79, fefe825cb7ffc0737165fdc7c3590d88
+2023-05-28 09:49:48 INFO::Fitting model to feature number 80, e9631f20eef544ba497a32e3571ce157
+2023-05-28 09:49:48 INFO::Fitting model to feature number 81, X31e0a333d5596a5cab852fb67a5bbc40
+2023-05-28 09:49:48 INFO::Fitting model to feature number 82, X9f15c49e14a7293ad3acf1a1338df113
+2023-05-28 09:49:48 INFO::Fitting model to feature number 83, X57626ed12a21b8f7def1896e3a12c019
+2023-05-28 09:49:48 INFO::Fitting model to feature number 84, X245847bcef32037de8ff36393c8fe385
+2023-05-28 09:49:48 INFO::Fitting model to feature number 85, d71dda64c8f1e2c9255816f46e705ad9
+2023-05-28 09:49:48 INFO::Fitting model to feature number 86, b2af119627d427c1413426c443525fb0
+2023-05-28 09:49:48 INFO::Fitting model to feature number 87, X2e4f44682114b15aec805b2b57ea0c42
+2023-05-28 09:49:48 INFO::Fitting model to feature number 88, X72b306eab127e2ab2f873d1656c52d44
+2023-05-28 09:49:48 INFO::Fitting model to feature number 89, X57048b91d623b6a879860b8bdbda1c2f
+2023-05-28 09:49:48 INFO::Fitting model to feature number 90, X65a08af6fb275f029f3281bfef01c6eb
+2023-05-28 09:49:48 INFO::Fitting model to feature number 91, dfa684741eb5e6b9fb129710c94bce9d
+2023-05-28 09:49:48 INFO::Fitting model to feature number 92, f74db088ba2bc99ad7f420ac06c34e26
+2023-05-28 09:49:48 INFO::Fitting model to feature number 93, X0cf1b1305f23c030d66a1b9166c48a98
+2023-05-28 09:49:48 INFO::Fitting model to feature number 94, X1a8fdedac7f571b3cb2bca61c81b9d8b
+2023-05-28 09:49:48 INFO::Fitting model to feature number 95, X4f23b52566f61c590314bc9f9f19e61b
+2023-05-28 09:49:48 INFO::Fitting model to feature number 96, X4e25ad2740ab07a3785d14d6469f9a42
+2023-05-28 09:49:48 INFO::Fitting model to feature number 97, dad0c6466977ce1c2a11184cd2773e8f
+2023-05-28 09:49:48 INFO::Fitting model to feature number 98, d73aa5e38a36e57b09d3d817a7386866
+2023-05-28 09:49:48 INFO::Fitting model to feature number 99, X917f1bfcc44ca26856ca8f0cff37ed92
+2023-05-28 09:49:48 INFO::Fitting model to feature number 100, X75f18b79444011195edf7c4ffcb46034
+2023-05-28 09:49:48 INFO::Fitting model to feature number 101, X8bfe69bb139c685311c20fa9de09c6b0
+2023-05-28 09:49:48 INFO::Fitting model to feature number 102, cf1ee1a5569ea288189b2628a0bdac04
+2023-05-28 09:49:48 INFO::Fitting model to feature number 103, dc3edd6a1ae9ada4d1e8b007763658ec
+2023-05-28 09:49:48 INFO::Fitting model to feature number 104, b587faf0da7a8439e782d7e706a25115
+2023-05-28 09:49:49 INFO::Fitting model to feature number 105, ccb910ba359682271d4db26cc7b95d60
+2023-05-28 09:49:49 INFO::Fitting model to feature number 106, d148a5ad2751388c08b29379a2ef8dd3
+2023-05-28 09:49:49 INFO::Fitting model to feature number 107, X1c30330f4d91421c4a2833ab2c725c46
+2023-05-28 09:49:49 INFO::Fitting model to feature number 108, X58ddb8378a8b2b3f5b1121864b060b9f
+2023-05-28 09:49:49 INFO::Fitting model to feature number 109, c724d7aa736af6e3e635bb16a0bff4b6
+2023-05-28 09:49:49 INFO::Fitting model to feature number 110, X7a4ee0bd56566dde8c0040d16808c247
+2023-05-28 09:49:49 INFO::Fitting model to feature number 111, X8b761d5dfce3a18d0d65ee6bca8c979b
+2023-05-28 09:49:49 INFO::Fitting model to feature number 112, X0da482204d65bfa420bebac66d447e50
+2023-05-28 09:49:49 INFO::Fitting model to feature number 113, X283d20332b3a92179965a393d8a85d1c
+2023-05-28 09:49:49 INFO::Fitting model to feature number 114, X3c9a63b3cf194b0cd315acc54fa25287
+2023-05-28 09:49:49 INFO::Fitting model to feature number 115, X6ffaeb1945b1408c8dfe564f759ba639
+2023-05-28 09:49:49 INFO::Fitting model to feature number 116, a884951a0222a7aef65d0976f02c5230
+2023-05-28 09:49:49 INFO::Fitting model to feature number 117, f266fe04289d683d8f65d5e3b68cd622
+2023-05-28 09:49:49 INFO::Fitting model to feature number 118, X55bac3c9e7327e2cd7ae3f873c80ac21
+2023-05-28 09:49:49 INFO::Fitting model to feature number 119, X92bb310f1e3e3a924c9ebc439260ca10
+2023-05-28 09:49:49 INFO::Fitting model to feature number 120, X6a4be0b97590662b351550da777d6f1e
+2023-05-28 09:49:49 INFO::Fitting model to feature number 121, X8f3b47e0f10e71b9185d4ed7ebcb09f4
+2023-05-28 09:49:49 INFO::Fitting model to feature number 122, cf48476f65d127b20bc0c8d3cb46c0bc
+2023-05-28 09:49:49 INFO::Fitting model to feature number 123, X9a117d476abc87f3b1a41e2f95e31e7b
+2023-05-28 09:49:49 INFO::Fitting model to feature number 124, X007234f0c3f22dd76c35f6fc3c5f4f9c
+2023-05-28 09:49:49 INFO::Fitting model to feature number 125, f32425f1e57743907f962dc6fc077a70
+2023-05-28 09:49:49 INFO::Fitting model to feature number 126, a8f663643bdf3210b028a4d2c6d80202
+2023-05-28 09:49:49 INFO::Fitting model to feature number 127, c260c4b19bf46e52cd8d3a52eec70c9d
+2023-05-28 09:49:49 INFO::Fitting model to feature number 128, X3da6f991dacb74d4099b9bfd084bdf11
+2023-05-28 09:49:49 INFO::Fitting model to feature number 129, X70cabe866dc740d945ac422c3e182828
+2023-05-28 09:49:49 INFO::Fitting model to feature number 130, c83b429e1c8d9f02e47931dc1708986d
+2023-05-28 09:49:49 INFO::Fitting model to feature number 131, X64ebfca95cebb8c7cc15f573790197d1
+2023-05-28 09:49:49 INFO::Fitting model to feature number 132, X99bd5ad8aa966493584193619ee6e54b
+2023-05-28 09:49:49 INFO::Fitting model to feature number 133, ac9bf5f0a1f6f34e62e7299a018fe618
+2023-05-28 09:49:49 INFO::Fitting model to feature number 134, X27a02b35689806649a7b17d9e06931b6
+2023-05-28 09:49:49 INFO::Fitting model to feature number 135, X72cabaaab452d74c6701f0631d570788
+2023-05-28 09:49:49 INFO::Fitting model to feature number 136, X90bf1ee2c1f5a2066399403a7f558232
+2023-05-28 09:49:49 INFO::Fitting model to feature number 137, X69a814b01253eb8dd675eba564f0bd74
+2023-05-28 09:49:49 INFO::Fitting model to feature number 138, X3aad1f62d19b17871de47326ca59c95d
+2023-05-28 09:49:49 INFO::Fitting model to feature number 139, d602209d31c187a24f4f08c87cdd2558
+2023-05-28 09:49:49 INFO::Fitting model to feature number 140, de1635503fa2cff0177d6f07310ef130
+2023-05-28 09:49:49 INFO::Fitting model to feature number 141, X2f64af90736d87cb8ac4f49dbaa82cf0
+2023-05-28 09:49:49 INFO::Fitting model to feature number 142, X3347fc196292d13854555f057051909d
+2023-05-28 09:49:49 INFO::Fitting model to feature number 143, a49b1aec5623056eec5742c96a60bcc6
+2023-05-28 09:49:49 INFO::Fitting model to feature number 144, X3e6e06c20f34a8aad0303afe861bc84a
+2023-05-28 09:49:49 INFO::Fitting model to feature number 145, afa8ebb854c6f59e664ce31adb09f32b
+2023-05-28 09:49:49 INFO::Fitting model to feature number 146, ca078f408cef7482264e3e2dcd7d1fd1
+2023-05-28 09:49:49 INFO::Fitting model to feature number 147, da7ba4fae18ca10cc9abc70fb4a24a10
+2023-05-28 09:49:49 INFO::Fitting model to feature number 148, b764526e3acbaa63f28beaa820d3c04f
+2023-05-28 09:49:49 INFO::Fitting model to feature number 149, c40b9f62fcd8537460ab537fa3a93209
+2023-05-28 09:49:49 INFO::Fitting model to feature number 150, X4bb2ed31d75e7b0d59111d0ed741726a
+2023-05-28 09:49:49 INFO::Fitting model to feature number 151, X8792185cae2db141121354249bd4ebc0
+2023-05-28 09:49:49 INFO::Fitting model to feature number 152, a37e5dc40054a123a62009855d2bf030
+2023-05-28 09:49:49 INFO::Fitting model to feature number 153, e5d587d9a4037adb69c6d826a05143fd
+2023-05-28 09:49:49 INFO::Fitting model to feature number 154, X70b4837e2a8016a2076b5b480d85e910
+2023-05-28 09:49:49 INFO::Fitting model to feature number 155, X9cbd86e1cdc4853dbde48565a54651a1
+2023-05-28 09:49:49 INFO::Fitting model to feature number 156, X1278bc9191aafd6eeca0d39e5662989c
+2023-05-28 09:49:49 INFO::Fitting model to feature number 157, X3fbafc23974c3cffcea01095e2cd8904
+2023-05-28 09:49:49 INFO::Fitting model to feature number 158, X66a8387151ff9d09e771cd1c0dd1edb2
+2023-05-28 09:49:49 INFO::Fitting model to feature number 159, b7a1805aeaf07f869dbacba4f6defb69
+2023-05-28 09:49:49 INFO::Fitting model to feature number 160, X2d4756249a39e1fdba596646fc1ff109
+2023-05-28 09:49:49 INFO::Fitting model to feature number 161, ac10606776af9d5243dab4d5a9ab48af
+2023-05-28 09:49:49 INFO::Fitting model to feature number 162, X0ecdffd70f10f8aec84c7212eac2925d
+2023-05-28 09:49:49 INFO::Fitting model to feature number 163, X5125d37c59ce40e4461d49f47ca01477
+2023-05-28 09:49:49 INFO::Fitting model to feature number 164, X96088835708ba86a1bc1d8f27105d2c4
+2023-05-28 09:49:49 INFO::Fitting model to feature number 165, X964a281d751f985c1cfea5cfcb1e230f
+2023-05-28 09:49:49 INFO::Fitting model to feature number 166, aa220802282b81ff9c49c2e089ef3461
+2023-05-28 09:49:49 INFO::Fitting model to feature number 167, X5feb06aec196b0178af641287c5f814d
+2023-05-28 09:49:49 INFO::Fitting model to feature number 168, X6db016e38d8e0af7195d0c8f9250320a
+2023-05-28 09:49:49 INFO::Fitting model to feature number 169, X9c46a4fe83f4354752d824af11aacb03
+2023-05-28 09:49:49 INFO::Fitting model to feature number 170, ab68a0b06b6faefaeb9bb8a6f2300708
+2023-05-28 09:49:49 INFO::Fitting model to feature number 171, a2849354ce174a994e982400cd02f5ba
+2023-05-28 09:49:49 INFO::Fitting model to feature number 172, X3591e1dfb595ee3851b97e401bebda41
+2023-05-28 09:49:49 INFO::Fitting model to feature number 173, e18b910ab780a0f4710ff7a42b379303
+2023-05-28 09:49:49 INFO::Fitting model to feature number 174, X3242644ae1020d44c44a0fae3005697a
+2023-05-28 09:49:49 INFO::Fitting model to feature number 175, X13094151e82e48b77d2581237214b382
+2023-05-28 09:49:49 INFO::Fitting model to feature number 176, X3f39863194d27f114033851c9425a2a5
+2023-05-28 09:49:49 INFO::Fitting model to feature number 177, X7bf213582f3b02e191adceb1866efb11
+2023-05-28 09:49:49 INFO::Fitting model to feature number 178, e0fc425db1abf8069fb615078286788d
+2023-05-28 09:49:49 INFO::Fitting model to feature number 179, e1b7e0b7364419e9e65b22eb054b72cf
+2023-05-28 09:49:49 INFO::Fitting model to feature number 180, X573c6c5762b52c4bb9f9179e3560a89f
+2023-05-28 09:49:49 INFO::Fitting model to feature number 181, X773f5d415ef9fde7ff574de831ce84e3
+2023-05-28 09:49:49 INFO::Fitting model to feature number 182, X4d9199deb4b68ddf9ed92b20a15af20f
+2023-05-28 09:49:49 INFO::Fitting model to feature number 183, a1fd763973e88bbdcb07390f6086273a
+2023-05-28 09:49:49 INFO::Fitting model to feature number 184, b2aa0c596a705077756a5a4eb8d862a2
+2023-05-28 09:49:49 INFO::Fitting model to feature number 185, X366bf97a54a95795610cd78f3e312c52
+2023-05-28 09:49:49 INFO::Fitting model to feature number 186, X63629ec61f3dddb70bb145edc8d47806
+2023-05-28 09:49:49 INFO::Fitting model to feature number 187, X9f013ae4fef6889bb632659495db0040
+2023-05-28 09:49:49 INFO::Fitting model to feature number 188, fdd1c37a7c16d8b00142dcd53ea31a58
+2023-05-28 09:49:49 INFO::Fitting model to feature number 189, X3565bda6d9fa6f0653bdbc4aa9fe5064
+2023-05-28 09:49:49 INFO::Fitting model to feature number 190, X9317222d45ee21827797e791a27009f1
+2023-05-28 09:49:49 INFO::Fitting model to feature number 191, X9600e46579985e4dd50c289af4c06b44
+2023-05-28 09:49:49 INFO::Fitting model to feature number 192, f65ef7c150b22403b07591d808a60bd1
+2023-05-28 09:49:49 INFO::Fitting model to feature number 193, X0480ad619bb342632a339ba559956cab
+2023-05-28 09:49:49 INFO::Fitting model to feature number 194, X7d88d9e1a9756edc089c7211575d6424
+2023-05-28 09:49:49 INFO::Fitting model to feature number 195, ad10618353e031bf969c5557d5980c46
+2023-05-28 09:49:49 INFO::Fitting model to feature number 196, X3b2b9da75f068793771f49172277cf74
+2023-05-28 09:49:49 INFO::Fitting model to feature number 197, X43b0a4da7dda3ca10fe4c454dc438b5f
+2023-05-28 09:49:49 INFO::Fitting model to feature number 198, a8ebbed1f982f06e3f3baf87849fafac
+2023-05-28 09:49:49 INFO::Fitting model to feature number 199, d1e54fc1d1a0d0a7e75f5098aa33d9af
+2023-05-28 09:49:49 INFO::Fitting model to feature number 200, d44205909d155ff48a2ed4d637823e4c
+2023-05-28 09:49:49 INFO::Fitting model to feature number 201, b9c07e5ef9b6c52210691be731eafe12
+2023-05-28 09:49:49 INFO::Fitting model to feature number 202, f8206f8e0f5e0fc8ef82d52e6c0397a2
+2023-05-28 09:49:49 INFO::Fitting model to feature number 203, X987dce5da2852ecd395fbd289c165850
+2023-05-28 09:49:49 INFO::Counting total values for each feature
+2023-05-28 09:49:49 INFO::Writing residuals to file ./data/DAA example/residuals.rds
+2023-05-28 09:49:49 INFO::Writing fitted values to file ./data/DAA example/fitted.rds
+2023-05-28 09:49:49 INFO::Writing all results to file (ordered by increasing q-values): ./data/DAA example/all_results.tsv
+2023-05-28 09:49:49 INFO::Writing the significant results (those which are less than or equal to the threshold of 0.250000 ) to file (ordered by increasing q-values): ./data/DAA example/significant_results.tsv
+2023-05-28 09:49:49 INFO::Writing heatmap of significant results to file: ./data/DAA example/heatmap.pdf
+2023-05-28 09:49:49 INFO::Writing association plots (one for each significant association) to output folder: ./data/DAA example
+2023-05-28 09:49:49 INFO::Plotting associations from most to least significant, grouped by metadata
+2023-05-28 09:49:49 INFO::Plotting data for metadata number 1, Env.feature..abbreviation.
+2023-05-28 09:49:49 INFO::Creating boxplot for categorical data, Env.feature..abbreviation. vs X94c5138a54d79f7a0ae39ee66f53ecb4

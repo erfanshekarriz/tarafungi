@@ -126,3 +126,104 @@ physeq <- phyloseq(OTUALL, TAXALL, METALL)
 saveRDS(physeq, "./data/rds/physeqTARAALL.rds")
 
 
+# CAZymes ####
+input <- read.csv("./data/tabular/cazymes_abundancetable.csv") %>% 
+  filter(Type == "MetaT") 
+
+plant <- "GH1 GH2 GH3 GH4 GH5 GH8 GH9 GH11 GH12 GH15 GH16 GH17 GH26 GH27 GH28 GH29 GH36 GH39 GH43 GH44 GH48 GH51 GH53 GH55 GH67 GH74 GH78 GH93 GH94 GH95 GH115 GH117 GH121 PL1 PL2 PL6 PL7 PL9 PL11 PL15 PL22" %>% 
+  strsplit(., " +")  %>% unlist()
+animal <- "GH1 GH2 GH3 GH4 GH18 GH19 GH20 GH29 GH33 GH38 GH58 GH79 GH84 GH85 GH88 GH89 GH92 GH95 GH98 GH99 GH101 GH105 GH109 GH110 GH113 PL6 PL8 PL12 PL13 PL21" %>% 
+  strsplit(., " +") %>% unlist()
+pept <- "GH23 GH24 GH25 GH73 GH102 GH103 GH104 GH108" %>% 
+  strsplit(., " +") %>% unlist()
+fung <- "GH5 GH8 GH16 GH18 GH19 GH20 GH55 GH64 GH71 GH81" %>% 
+  strsplit(., " +") %>% unlist()
+
+cols <- c("Plant Cell Wall Carbohydrates", "Animal Carbohydrates", 
+          "Peptidoglycan", "Fungal Carbohydrates")
+rows <- unique(c(animal, plant, pept, fung))
+taxkey <- matrix(nrow = length(rows), 
+              ncol = 4,
+              dimnames = list(rows, cols)) %>% 
+  as.data.frame()
+
+tax <- input %>% select(SeqID, cazy) %>% distinct() %>% 
+  mutate(CAZYgroup = str_extract(cazy, "^(.+?)[_+]", group = 1), 
+         CAZYgroup = if_else(is.na(CAZYgroup), cazy, CAZYgroup), 
+         CAZYgroup = str_trim(CAZYgroup)) %>% 
+  rename(CAZY = cazy) %>% 
+  mutate(animal_carbs = if_else(CAZYgroup %in% animal, 1, 0), 
+         plant_cell_wall = if_else(CAZYgroup %in% plant, 1, 0), 
+         peptidoglycan = if_else(CAZYgroup %in% pept, 1, 0), 
+         fungal_carbs = if_else(CAZYgroup %in% fung, 1, 0)) %>% 
+  mutate(Target = if_else(animal_carbs == 1, "Animal Carbohydrates", NA), 
+         Target = if_else(plant_cell_wall == 1, "Plant Cell Wall", Target), 
+         Target = if_else(peptidoglycan == 1, "Peptidoglycan", Target), 
+         Target = if_else(fungal_carbs == 1, "Fungal Carbohydrates", Target),
+         Target = if_else(rowSums(.[4:7])>1, "Multitargeted", Target), 
+         Target = if_else(rowSums(.[4:7])==0, "Other", Target), 
+         ) %>% 
+  distinct(SeqID, .keep_all = TRUE) %>% 
+  column_to_rownames(var = "SeqID") %>% 
+  as.matrix()
+
+
+
+otu <- input %>% 
+  select(Sample_Code, SeqID, Occurrence) %>% 
+  distinct() %>% 
+  # mutate(Occurrence = as.numeric(Occurrence)) %>% 
+  pivot_wider(names_from = SeqID, 
+              values_from = Occurrence, 
+              values_fill = 0) %>% 
+  column_to_rownames(var = "Sample_Code") %>% 
+  as.matrix()
+meta <- input %>% select(-c(SeqID, Occurrence, cazy)) %>% 
+  distinct() %>% 
+  column_to_rownames(var = "Sample_Code")
+  
+
+OTU <- otu_table(otu, taxa_are_rows = FALSE)
+TAX <- tax_table(tax)
+MET <- sample_data(meta)
+
+
+physeq <- phyloseq(OTU, TAX, MET)
+saveRDS(physeq, "./data/rds/physeqTARACazymes.rds")
+
+
+# Peptidase ####
+input <- read.csv("./data/tabular/protease_abundancetable.csv") %>% 
+  filter(type == "MetaT") 
+
+otu <- input %>% 
+  select(Sample_Code, SeqID, Occurence) %>% 
+  distinct() %>% 
+  # mutate(Occurrence = as.numeric(Occurrence)) %>% 
+  pivot_wider(names_from = SeqID, 
+              values_from = Occurence, 
+              values_fill = 0) %>% 
+  column_to_rownames(var = "Sample_Code") %>% 
+  as.matrix()
+meta <- input %>% select(Sample_Code, type, Size, Filter, 
+                         Stations, Depth) %>% 
+  distinct() %>% 
+  column_to_rownames(var = "Sample_Code") 
+tax <- input %>% select(-c(Sample_Code, type, Size, Filter, 
+                           Stations, Depth, Occurence)) %>% 
+  distinct() %>% 
+  column_to_rownames(var = "SeqID") %>% 
+  mutate(class = str_replace(class, "Uncl.+$", "Unknown")) %>%
+  as.matrix()
+
+
+
+OTU <- otu_table(otu, taxa_are_rows = FALSE)
+TAX <- tax_table(tax)
+MET <- sample_data(meta)
+
+
+
+physeq <- phyloseq(OTU, TAX, MET)
+saveRDS(physeq, "./data/rds/physeqTARAPeptidase.rds")
+

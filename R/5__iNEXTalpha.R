@@ -8,20 +8,23 @@ library(ggsci)
 
 # INPUT PARAMETERS
 fileoptions <- list.files("./data/rds/")
+fileoptions
+input <- "physeqTARAFungi.rds"
 
-input <- "physeqTARAALL.rds"
 physeq <- readRDS(paste0("./data/rds/", input))
 meta <- data.frame(sample_data(physeq))
+tax <- data.frame(tax_table(physeq))
 features <- data.frame(features = colnames(meta))
+ranks <- data.frame(ranks = rank_names(physeq))
 
 
 SE <- FALSE # Whether to calculate the standard error (significantly increases run time)
-group <- "OS.region...abbreviation..full.name..MRG...."
-iterations <- 100
+group <- "Env.feature..abbreviation."
+iterations <- 20
 seednumber <- 123
-coveragethresh <- 0.70
+coveragethresh <- 0.90
 confidence <- 0.95
-knots <- 50 # number of intervals between min and maximum seq samples
+knots <- 20 # number of intervals between min and maximum seq samples
 endpoint <- NULL # if null it will automatically do the maximum 
 
 
@@ -244,7 +247,7 @@ plotdfGROUPED %>%
         axis.text.y = element_text(size = 8, face = "italic"), 
         plot.margin=unit(rep(0.5, 4), "cm")) + 
   scale_color_jco() + 
-  ggtitle("Rarefaction X100 (q=0)") + 
+  ggtitle("Fungal Richness X100 (q=0)") + 
   geom_vline(xintercept = min(observedGROUPED$m), linetype = "dashed", 
              color = "red", linewidth = 0.7, alpha = 0.5) + 
   xlab("Sequences Sampled (x10,000)") + 
@@ -268,48 +271,22 @@ ggsave(paste0("./data/figures/svg/alphadivGROUP.svg"),
 
 
 
-# 7) PLOT METADATA CORRELATION ####
-# corrdata <- alphadivPLOT %>% select(c(qD, colnames(sampledata))) %>% 
-#   select(where(is.numeric)) 
-# 
-# COR <- cor(corrdata, use="pairwise.complete.obs")
-# p <     - (c or.mtest(corrdata))$p
-# 
-# corrplot(COR, 
-#          type = "upper", 
-#          method = 'number', 
-#          p.mat = p, 
-#          tl.cex = 0.6,
-#          number.cex = 0.6,
-#          insig = "blank") # colorful number
+# 6) PLOT METADATA CORRELATION ####
+corrdata <- alphadivPLOT %>% 
+  filter(SC > coveragethresh) %>% 
+  select(c(qD, colnames(sampledata))) %>% 
+  select(where(is.numeric)) 
 
+COR <- cor(corrdata, use="pairwise.complete.obs")
 
-# OTHER ANALYSIS ####
+p <- (cor.mtest(corrdata))$p
+pfilt <- p[COR>0.5]
 
-# set.seed(seednumber)
-# Richness <- ChaoRichness(t(otu), datatype = "abundance", conf = confidence)
-# saveRDS(Richness, paste0("./data/rds/rarcurveiNEXT_Richness_", input))
-# Richness %>% 
-#   merge(sampledata, by = "row.names") %>% 
-#   ggplot(aes(x = Group, y = Estimator)) + 
-#   geom_boxplot()
-
-
-# set.seed(seednumber)
-# Shannon <- ChaoShannon(t(otu), datatype = "abundance", transform = FALSE, conf = confidence, B = iterations)
-# saveRDS(Shannon, paste0("./data/rds/rarcurveiNEXT_Shannon_", input))
-# Shannon %>%
-#   merge(sampledata, by = "row.names") %>%
-#   ggplot(aes(x = Group, y = Estimator)) +
-#   geom_boxplot()
-# 
-# 
-# set.seed(seednumber)
-# Simpson <- ChaoSimpson(t(otu), datatype = "abundance", transform = FALSE, conf = confidence, B = iterations)
-# Simpson %>%
-#   merge(sampledata, by = "row.names") %>%
-#   ggplot(aes(x = Group, y = Estimator)) +
-#   geom_boxplot()
-# saveRDS(Simpson, paste0("./data/rds/rarcurveiNEXT_Simpson_", input))
-
-
+corrplot(COR, 
+         type = "upper", 
+         method = 'circle', 
+         p.mat = p, 
+         tl.cex = 0.4,
+         tl.col = "grey50", 
+         number.cex = 0.3,
+         insig = "blank") # colorful number

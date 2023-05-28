@@ -1,0 +1,43 @@
+2023-05-28 10:25:51 INFO::Writing function arguments to log file
+2023-05-28 10:25:51 DEBUG::Function arguments
+2023-05-28 10:25:51 DEBUG::Output folder: DAA output
+2023-05-28 10:25:51 DEBUG::Min Abundance: 0.000000
+2023-05-28 10:25:51 DEBUG::Min Prevalence: 0.000000
+2023-05-28 10:25:51 DEBUG::Normalization: TSS
+2023-05-28 10:25:51 DEBUG::Transform: AST
+2023-05-28 10:25:51 DEBUG::Analysis method: LM
+2023-05-28 10:25:51 DEBUG::Max significance: 0.250000
+2023-05-28 10:25:51 DEBUG::Random effects:
+2023-05-28 10:25:51 DEBUG::Fixed effects: Env.feature..abbreviation.
+2023-05-28 10:25:51 DEBUG::Correction method: BH
+2023-05-28 10:25:51 DEBUG::Standardize: TRUE
+2023-05-28 10:25:51 DEBUG::Cores: 4
+2023-05-28 10:25:51 INFO::Verifying options selected are valid
+2023-05-28 10:25:52 INFO::Determining format of input files
+2023-05-28 10:25:52 INFO::Input format is data samples as columns and metadata samples as rows
+2023-05-28 10:25:52 DEBUG::Transformed data so samples are rows
+2023-05-28 10:25:52 DEBUG::A total of 321 samples were found in both the data and metadata
+2023-05-28 10:25:52 DEBUG::Reordering data/metadata to use same sample ordering
+2023-05-28 10:25:52 INFO::Formula for fixed effects: expr ~  Env.feature..abbreviation.
+2023-05-28 10:25:52 INFO::Filter data based on min abundance and min prevalence
+2023-05-28 10:25:52 INFO::Total samples in data: 321
+2023-05-28 10:25:52 INFO::Min samples required with min abundance for a feature not to be filtered: 0.000000
+2023-05-28 10:25:52 INFO::Total filtered features: 0
+2023-05-28 10:25:52 INFO::Filtered feature names from abundance and prevalence filtering:
+2023-05-28 10:25:52 INFO::Total filtered features with variance filtering: 0
+2023-05-28 10:25:52 INFO::Filtered feature names from variance filtering:
+2023-05-28 10:25:52 INFO::Running selected normalization method: TSS
+2023-05-28 10:25:52 INFO::Applying z-score to standardize continuous metadata
+2023-05-28 10:25:52 INFO::Running selected transform method: AST
+2023-05-28 10:25:52 INFO::Running selected analysis method: LM
+2023-05-28 10:25:52 INFO::Creating cluster of 4 R processes
+2023-05-28 10:26:01 INFO::Counting total values for each feature
+2023-05-28 10:26:01 INFO::Writing residuals to file DAA output/residuals.rds
+2023-05-28 10:26:01 INFO::Writing fitted values to file DAA output/fitted.rds
+2023-05-28 10:26:01 INFO::Writing all results to file (ordered by increasing q-values): DAA output/all_results.tsv
+2023-05-28 10:26:01 INFO::Writing the significant results (those which are less than or equal to the threshold of 0.250000 ) to file (ordered by increasing q-values): DAA output/significant_results.tsv
+2023-05-28 10:26:01 INFO::Writing heatmap of significant results to file: DAA output/heatmap.pdf
+2023-05-28 10:26:01 INFO::Writing association plots (one for each significant association) to output folder: DAA output
+2023-05-28 10:26:01 INFO::Plotting associations from most to least significant, grouped by metadata
+2023-05-28 10:26:01 INFO::Plotting data for metadata number 1, Env.feature..abbreviation.
+2023-05-28 10:26:01 INFO::Creating boxplot for categorical data, Env.feature..abbreviation. vs X94c5138a54d79f7a0ae39ee66f53ecb4
